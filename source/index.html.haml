@@ -4,6 +4,12 @@
 %p= linkedin.summary
 
 %section
+  %h3 Skills
+  %ul
+    = list_of linkedin.skills do |skill|
+      = skill
+
+%section
   %h3 Experience
   %ul
     = list_of linkedin.jobs do |job|
@@ -12,7 +18,15 @@
         %li= job.company_name
         / %li= job.company_url
         / %li= job.company_details
-        %li= job.started_on
-        %li= job.ended_on
+        %li= job.duration
         %li= job.location
         %li= job.description
+
+%section
+  %h3 Education
+  %ul
+    = list_of linkedin.education do |education|
+      %ul
+        %li= education.summary
+        %li= education.details
+        %li= education.duration

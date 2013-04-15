@@ -11,8 +11,8 @@ module LinkedinHelper
 
     ##
     #
-    def []( selector )
-      @doc.css selector
+    def []( *selector )
+      @doc.css *selector
     end
 
     ##
@@ -38,19 +38,54 @@ module LinkedinHelper
     def jobs
       self[ '#profile-experience .position' ].map { |node| Job.new( node ) }
     end
+
+    ##
+    #
+    def skills
+      self[ '#profile-skills .competency' ].map( &:text )
+    end
+
+    ##
+    #
+    def education
+      self[ '#profile-education .education'].map { |node| Education.new( node ) }
+    end
+  end
+
+  module Duration
+
+    ##
+    #
+    def duration
+      "%s - %s" % [ started_on, ended_on ]
+    end
+
+    ##
+    #
+    def started_on
+      self[ '.period .dtstart' ].text
+    end
+
+    ##
+    #
+    def ended_on
+      self[ '.period .dtend', '.period .dtstamp' ].text
+    end
   end
 
   ##
   # Represents an entry in the "Experience" section of a profile.
   class Job
+    include Duration
+
     def initialize( node )
       @node = node
     end
 
     ##
     #
-    def []( selector )
-      @node.at_css selector
+    def []( *selector )
+      @node.at_css *selector
     end
 
     ##
@@ -79,18 +114,6 @@ module LinkedinHelper
 
     ##
     #
-    def started_on
-      self[ '.period .dtstart' ].text
-    end
-
-    ##
-    #
-    def ended_on
-      self[ '.period .dtend' ].try( :text ) || 'Present'
-    end
-
-    ##
-    #
     def location
       self[ '.period .location' ].text
     end
@@ -99,6 +122,32 @@ module LinkedinHelper
     #
     def description
       self[ '.description' ].try( :text ) || 'No Description'
+    end
+  end
+
+  class Education
+    include Duration
+
+    def initialize( node )
+      @node = node
+    end
+
+    ##
+    #
+    def []( *selector )
+      @node.at_css *selector
+    end
+
+    ##
+    #
+    def summary
+      self[ '.summary' ].text
+    end
+
+    ##
+    #
+    def details
+      self[ '.details-education' ].text
     end
   end
 
