@@ -1,1 +1,18 @@
-This will be the resume
+%h1= linkedin.full_name
+%h2= linkedin.headline
+
+%p= linkedin.summary
+
+%section
+  %h3 Experience
+  %ul
+    = list_of linkedin.jobs do |job|
+      %ul
+        %li= job.title
+        %li= job.company_name
+        / %li= job.company_url
+        / %li= job.company_details
+        %li= job.started_on
+        %li= job.ended_on
+        %li= job.location
+        %li= job.description

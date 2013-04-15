@@ -10,5 +10,8 @@
 # Ignore the build directory
 /build
 
+# Ignore the tmp directory
+/tmp
+
 # Ignore Sass' cache
 /.sass-cache
