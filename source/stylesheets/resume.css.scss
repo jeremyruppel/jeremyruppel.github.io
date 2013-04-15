@@ -1,0 +1,62 @@
+@import "compass";
+@import "compass/reset";
+@import "susy";
+
+// ========
+// = Grid =
+// ========
+
+$total-columns  : 5;
+$column-width   : 8em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+body {
+  @include container;
+
+  header, footer, section {
+    @include clearfix;
+    padding : 16px 0;
+  }
+  section {
+    > h3 {
+      @include span-columns( 1 );
+    }
+    > p, > ul {
+      @include span-columns( 4 omega );
+    }
+    > ul > li {
+      padding-bottom : 36px;
+    }
+    &#skills > ul li {
+      @include span-columns( 2 );
+      padding-bottom : 8px;
+    }
+  }
+}
+
+// ==========
+// = Styles =
+// ==========
+
+html { -webkit-font-smoothing : antialiased; }
+body, html {
+  font-family : georgia;
+  font-size   : 16px;
+  line-height : 24px;
+  color       : #2a2a2a;
+}
+a {
+  @include link-colors( #4684d4, #145aa4 );
+}
+h1, h2, h3, h4, h5 {
+  font-weight : bold;
+}
+h1 { font-size : 36px; line-height : 46px; }
+h2 { font-size : 22px; line-height : 40px; font-weight : normal; font-style : italic; }
+section {
+  border-top : 1px solid #a5a5a5;
+}
+.duration {
+  float : right;
+}

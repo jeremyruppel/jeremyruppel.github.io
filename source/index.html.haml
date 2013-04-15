@@ -1,32 +1,34 @@
-%h1= linkedin.full_name
-%h2= linkedin.headline
+%header
+  %h1= linkedin.full_name
+  %h2= linkedin.headline
 
-%p= linkedin.summary
+%section#profile
+  %h3 Profile
+  %p= linkedin.summary
 
-%section
+%section#skills
   %h3 Skills
   %ul
     = list_of linkedin.skills do |skill|
       = skill
 
-%section
+%section#experience
   %h3 Experience
   %ul
     = list_of linkedin.jobs do |job|
+      %span.duration= job.duration
+      %h4= job.title
       %ul
-        %li= job.title
-        %li= job.company_name
-        / %li= job.company_url
-        / %li= job.company_details
-        %li= job.duration
+        %li= link_to job.company_name, job.company_url, :target => '_blank'
         %li= job.location
+        %li= job.company_details
         %li= job.description
 
-%section
+%section#education
   %h3 Education
   %ul
     = list_of linkedin.education do |education|
+      %span.duration= education.duration
+      %h4= education.summary
       %ul
-        %li= education.summary
         %li= education.details
-        %li= education.duration
