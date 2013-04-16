@@ -14,10 +14,6 @@ $grid-padding   : $gutter-width;
 body {
   @include container;
 
-  header, footer, section {
-    @include clearfix;
-    padding : 16px 0;
-  }
   section {
     > h3 {
       @include span-columns( 1 );
@@ -25,15 +21,68 @@ body {
     > p, > ul {
       @include span-columns( 4 omega );
     }
-    > ul > li {
-      padding-bottom : 36px;
-    }
     &#skills > ul li {
       @include span-columns( 2 );
-      padding-bottom : 8px;
     }
   }
+
+  @include at-breakpoint( 2 30em ){
+    @include with-grid-settings( 2, 30em, $gutter-width, $grid-padding ) {
+      @include container;
+
+      section {
+        > h3 {
+          @include span-columns( 2 );
+        }
+        > p, > ul {
+          @include span-columns( 2 );
+        }
+        &#skills > ul li {
+          @include span-columns( 1 );
+
+          &:nth-child(even){
+            @include span-columns( 1 omega );
+          }
+        }
+      }
+
+      h1, h2, h3 {
+        text-align : center;
+      }
+      section {
+        h3 {
+          margin-bottom : 10px;
+        }
+        &#skills > ul li {
+          text-align : center;
+        }
+      }
+    };
+  }
 }
+
+// ==========
+// = Layout =
+// ==========
+
+body {
+  padding-top    : 1em;
+  padding-bottom : 3em;
+
+  header, footer, section {
+    @include clearfix;
+    padding : 16px 0;
+  }
+
+  section > ul > li {
+    padding-bottom : 36px;
+  }
+
+  section#skills > ul li {
+    padding-bottom : 8px;
+  }
+}
+
 
 // ==========
 // = Styles =
