@@ -27,6 +27,41 @@ end
 
 page "/feed.xml", :layout => false
 
+# ==========
+# = Resume =
+# ==========
+
+module Resume
+  extend self
+
+  def registered( app, options )
+
+    app.after_configuration do
+      yield
+    end
+
+    app.after_build do
+
+      html = File.join build_dir,  resume_template
+      css  = File.join build_dir,  resume_stylesheet
+      pdf  = File.join build_dir,  resume_filename
+      copy = File.join source_dir, resume_filename
+
+      %x| wkhtmltopdf --user-style-sheet "#{css}" "#{html}" "#{pdf}" |
+      %x| cp "#{pdf}" "#{copy}" |
+    end
+  end
+  alias :included :registered
+
+  ::Middleman::Extensions.register :resume, self
+end
+
+activate :resume do
+  set :resume_template,   'index.html'
+  set :resume_stylesheet, 'stylesheets/resume.css'
+  set :resume_filename,   linkedin.full_name + '.pdf'
+end
+
 ###
 # Compass
 ###

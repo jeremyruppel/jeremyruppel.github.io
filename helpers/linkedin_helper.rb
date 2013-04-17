@@ -157,6 +157,10 @@ module LinkedinHelper
     @linkedin ||= Profile.new linkedin_uri
   end
 
+  def resume_pdf_path
+    "/#{linkedin.full_name}.pdf"
+  end
+
   def linkedin_uri
     File.join Middleman.locate_root, 'tmp/jeremyruppel.html'
   end

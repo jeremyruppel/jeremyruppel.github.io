@@ -14,6 +14,14 @@ $grid-padding   : $gutter-width;
 body {
   @include container;
 
+  header {
+    hgroup {
+      @include span-columns( 3 );
+    }
+    aside {
+      @include span-columns( 2 omega );
+    }
+  }
   section {
     > h3 {
       @include span-columns( 1 );
@@ -29,7 +37,11 @@ body {
   @include at-breakpoint( 2 30em ){
     @include with-grid-settings( 2, 30em, $gutter-width, $grid-padding ) {
       @include container;
-
+      header {
+        hgroup, aside {
+          @include span-columns( 2 );
+        }
+      }
       section {
         > h3 {
           @include span-columns( 2 );
@@ -47,6 +59,9 @@ body {
       }
 
       h1, h2, h3 {
+        text-align : center;
+      }
+      header a {
         text-align : center;
       }
       section {
@@ -72,6 +87,10 @@ body {
   header, footer, section {
     @include clearfix;
     padding : 16px 0;
+  }
+
+  header aside {
+    text-align : right;
   }
 
   section > ul > li {
@@ -103,6 +122,14 @@ h1, h2, h3, h4, h5 {
 }
 h1 { font-size : 36px; line-height : 46px; }
 h2 { font-size : 22px; line-height : 40px; font-weight : normal; font-style : italic; }
+header aside {
+  border-top : 1px dotted #a5a5a5;
+  margin-top : 4px;
+  padding-top : 10px;
+}
+header a {
+  display : block;
+}
 section {
   border-top : 1px solid #a5a5a5;
 }

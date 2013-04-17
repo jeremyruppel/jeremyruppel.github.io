@@ -1,6 +1,11 @@
 %header
-  %h1= linkedin.full_name
-  %h2= linkedin.headline
+  %hgroup
+    %h1= linkedin.full_name
+    %h2= linkedin.headline
+  %aside
+    = mail_to 'jeremy.ruppel@gmail.com'
+    = link_to 'github.com/jeremyruppel', 'http://github.com/jeremyruppel', :target => '_blank'
+    = link_to 'Download PDF', resume_filename, :target => '_blank'
 
 %section#profile
   %h3 Profile
