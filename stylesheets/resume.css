@@ -1,0 +1,223 @@
+/* line 17, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 14, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+body {
+  *zoom: 1;
+  max-width: 44em;
+  _width: 44em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  body:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 18, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body header hgroup {
+    width: 59.09091%;
+    float: left;
+    margin-right: 2.27273%;
+    display: inline; }
+  /* line 21, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body header aside {
+    width: 38.63636%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline; }
+  /* line 26, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body section > h3 {
+    width: 18.18182%;
+    float: left;
+    margin-right: 2.27273%;
+    display: inline; }
+  /* line 29, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body section > p, body section > ul {
+    width: 79.54545%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline; }
+  /* line 32, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body section#skills > ul li {
+    width: 38.63636%;
+    float: left;
+    margin-right: 2.27273%;
+    display: inline; }
+  @media (max-width: 30em) {
+    /* line 14, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+    body {
+      max-width: 61em;
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+      body:after {
+        content: "";
+        display: table;
+        clear: both; }
+      /* line 41, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body header hgroup, body header aside {
+        width: 100%;
+        float: left;
+        margin-right: 1.63934%; }
+      /* line 46, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body section > h3 {
+        width: 100%;
+        float: left;
+        margin-right: 1.63934%; }
+      /* line 49, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body section > p, body section > ul {
+        width: 100%;
+        float: left;
+        margin-right: 1.63934%; }
+      /* line 52, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body section#skills > ul li {
+        width: 49.18033%;
+        float: left;
+        margin-right: 1.63934%; }
+        /* line 55, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+        body section#skills > ul li:nth-child(even) {
+          width: 49.18033%;
+          float: right;
+          margin-right: 0; }
+      /* line 61, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body h1, body h2, body h3 {
+        text-align: center; }
+      /* line 64, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body header a {
+        text-align: center; }
+      /* line 68, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body section h3 {
+        margin-bottom: 10px; }
+      /* line 71, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+      body section#skills > ul li {
+        text-align: center; } }
+
+/* line 83, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+body {
+  padding-top: 1em;
+  padding-bottom: 3em; }
+  /* line 87, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body header, body footer, body section {
+    overflow: hidden;
+    *zoom: 1;
+    padding: 16px 0; }
+  /* line 92, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body header aside {
+    text-align: right; }
+  /* line 96, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body section > ul > li {
+    padding-bottom: 36px; }
+  /* line 100, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+  body section#skills > ul li {
+    padding-bottom: 8px; }
+
+/* line 110, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+html {
+  -webkit-font-smoothing: antialiased; }
+
+/* line 111, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+body, html {
+  font-family: georgia;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2a2a2a; }
+
+/* line 117, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+a {
+  color: #4684d4; }
+  /* line 24, /Users/jeremyruppel/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+  a:hover {
+    color: #145aa4; }
+
+/* line 120, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+h1, h2, h3, h4, h5 {
+  font-weight: bold; }
+
+/* line 123, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+h1 {
+  font-size: 36px;
+  line-height: 46px; }
+
+/* line 124, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+h2 {
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: normal;
+  font-style: italic; }
+
+/* line 125, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+header aside {
+  border-top: 1px dotted #a5a5a5;
+  margin-top: 4px;
+  padding-top: 10px; }
+
+/* line 130, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+header a {
+  display: block; }
+
+/* line 133, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+section {
+  border-top: 1px solid #a5a5a5; }
+
+/* line 136, /Users/jeremyruppel/Git/jeremyruppel.github.io/source/stylesheets/resume.css.scss */
+.duration {
+  float: right; }
