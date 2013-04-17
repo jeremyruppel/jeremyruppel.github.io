@@ -5,3 +5,9 @@ namespace :linkedin do
     sh 'curl http://www.linkedin.com/in/jeremyruppel > tmp/jeremyruppel.html'
   end
 end
+
+desc 'Build and deploy the site'
+task :deploy => :'linkedin:update' do
+  sh 'middleman build'
+  sh 'middleman deploy'
+end
